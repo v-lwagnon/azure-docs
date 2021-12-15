@@ -91,8 +91,11 @@ Use the steps in [Add or delete users - Azure Active Directory](../active-direct
 
 1. Enable Azure AD authentication on the VPN gateway by navigating to **Point-to-site configuration** and picking **OpenVPN (SSL)** as the **Tunnel type**. Select **Azure Active Directory** as the **Authentication type**, then fill in the information under the **Azure Active Directory** section.
 
-   * **Tenant:** TenantID for the Azure AD tenant ```https://login.microsoftonline.com/{AzureAD TenantID}/```
-
+   * **For Azure Public Tenants:** TenantID for the Azure AD tenant ```https://login.microsoftonline.com/{AzureAD TenantID}/```
+   * **For Azure Government Tenants:** TenantID for the Azure AD tenant ```https://login.microsoftonline.us/{AzureAD TenantID}/```
+   * **For Azure Germany Tenants:** TenantID for the Azure AD tenant ```https://login-us.microsoftonline.de/{AzureAD TenantID}/```	
+   * **For Azure China 21Vianet Tenants:** TenantID for the Azure AD tenant ```https://login.chinacloudapi.cn/{AzureAD TenantID}/```
+   
    * **Audience:** Application ID of the "Azure VPN" Azure AD Enterprise App
 
 	   * Enter 41b23e61-6c1e-4545-b367-cd054e0ed4b4 for Azure Public
